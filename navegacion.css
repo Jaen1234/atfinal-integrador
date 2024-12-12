@@ -1,0 +1,409 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+}
+
+/* Barra de navegación */
+.navbar-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 20px 5px;
+    z-index: 1000; /* Asegura que la barra se quede encima del contenido */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo a la izquierda */
+.navbar-top .logo {
+    flex: 0 0 auto; /* El logo no se estirará ni reducirá */
+}
+
+.navbar-top .logo-img {
+    height: 60px; /* Ajusta el tamaño de tu logo aquí */
+}
+
+/* Enlaces de navegación centrados en la página */
+.navbar-top .nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%); /* Centra los enlaces de navegación */
+}
+
+.navbar-top .nav-links li {
+    margin-right: 20px;
+}
+
+.navbar-top .nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    display: inline-block;
+}
+
+.navbar-top .nav-links a:hover {
+    color: #ff4d4d;
+    border-bottom: 2px solid #ff4d4d;
+}
+
+/* Barra de navegación derecha con íconos */
+.navbar-top .nav-links-right {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Alineación vertical de los íconos */
+}
+
+.navbar-top .nav-links-right li {
+    margin-left: 5px; /* Espacio entre los elementos */
+}
+
+.navbar-top .nav-links-right a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.navbar-top .nav-links-right a i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    font-size: 10px; /* Tamaño por defecto para los iconos */
+}
+
+/* Hacer el icono de WhatsApp más grande */
+.navbar-top .nav-links-right a i.fab.fa-whatsapp {
+    font-size: 24px; /* Aumenta el tamaño solo para el icono de WhatsApp */
+}
+
+.navbar-top .nav-links-right a:hover {
+    color: #ff4d4d;
+}
+
+.navbar-top .nav-links-right a i.fas {
+    font-size: 20px;
+}
+/* Contenedor del slider de imágenes */
+.image-slider {
+    margin-top: 120px; /* Espacio debajo de la barra de navegación */
+    overflow: hidden; /* Oculta el contenido que está fuera del contenedor */
+    width: 100%; /* Ancho del contenedor (100% de la pantalla) */
+    position: relative; /* Para posicionar los botones de flecha */
+    height: 479px;
+}
+/*Modificacion en la barra de imagenes*/
+.slider-container {
+    display: flex; /* Alinea las imágenes horizontalmente */
+    transition: transform 1s ease-in-out; /* Suaviza la transición de las imágenes */
+}
+
+.slider-image {
+    width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilo adicional para las imágenes si es necesario */
+.slider-image {
+    min-width: 100%; /* Las imágenes se adaptan al 100% del contenedor */
+}
+
+/* Estilo para los botones de flecha */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que los botones estén encima de las imágenes */
+}
+@media (max-width: 768px) {
+    .slider-btn {
+        font-size: 24px; /* Reduces the size of the arrows on smaller screens */
+    }
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Estilos para el título y texto debajo del slider */
+.explore-menu {
+    text-align: center; /* Alinea el contenido en el centro */
+    margin-top: 50px; /* Espacio entre el slider y el título */
+}
+
+.explore-menu h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+.explore-menu p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Estilos para los bloques de pizza */
+.pizza-blocks {
+    display: flex; /* Distribuye los bloques en una fila */
+    justify-content: space-between; /* Espacio entre los bloques */
+    gap: 10px; /* Espacio entre los bloques */
+    margin-top: 50px; /* Espacio después del texto "Disfruta de los sabores" */
+    padding: 0 10px; /* Espaciado a los lados */
+}
+
+.pizza-block {
+    background-color: #ffffff;
+    width: 15%; /* Ancho de cada bloque */
+    text-align: center; /* Alinea el texto (nombre de la pizza) al centro */
+}
+
+.pizza-block img {
+    width: 100%; /* La imagen ocupa todo el ancho del bloque */
+    height: auto; /* La imagen se ajusta proporcionalmente */
+    border-radius: 10px; /* Bordes redondeados de la imagen */
+}
+
+.pizza-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+}
+/* Estilos para la sección de promociones */
+.promotions-section {
+    text-align: left; /* Alinea el contenido a la izquierda */
+    margin-top: 60px; /* Espacio después de los bloques de pizza */
+    padding: 0 20px; /* Espaciado a los lados */
+}
+
+/* Estilo para el subtítulo "Promociones" */
+.promotions-section h3 {
+    font-size: 28px; /* Tamaño grande para el subtítulo */
+    font-weight: 700; /* Fuente en negrita */
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espacio debajo del subtítulo */
+}
+
+/* Estilo para el párrafo debajo del subtítulo */
+.promotions-section p {
+    font-size: 18px; /* Tamaño de fuente para el párrafo */
+    color: #666; /* Color gris suave */
+    font-weight: 400; /* Fuente normal */
+    margin-bottom: 30px; /* Espacio debajo del párrafo */
+}
+
+
+
+
+/* Estilos para la sección de las pizzas */
+.pizza-options {
+    display: flex; /* Alinea los bloques horizontalmente */
+    justify-content: flex-start; /* Alinea los bloques al inicio */
+    gap: 30px; /* Espacio entre los bloques */
+    margin-top: 50px; /* Espacio después del párrafo "Sabores" */
+    padding: 0 20px; /* Relleno a los lados */
+    flex-wrap: wrap; /* Permite que los bloques se ajusten cuando no hay suficiente espacio */
+}
+@media (max-width: 768px) {
+    .pizza-options {
+        gap: 20px;
+        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+    }
+    .pizza-option {
+        width: 45%; /* Ajusta el ancho de los bloques en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .pizza-option {
+        width: 100%; /* Bloques ocupan el 100% del ancho en pantallas muy pequeñas */
+    }
+}
+
+/* Estilo para cada bloque de pizza */
+.pizza-option {
+    
+    width: 30%; /* Cada bloque ocupa la mitad del ancho de la sección */
+    background-color: #f9f9f9; /* Fondo claro para los bloques */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que la imagen no sobresalga de los bordes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de los bloques */
+    text-align: center; /* Centra el contenido dentro de cada bloque */
+}
+
+/* Estilo de la imagen de la pizza */
+.pizza-option img {
+    width: 50%; /* La imagen ocupa todo el ancho del bloque */
+    height: auto; /* Ajusta la altura de la imagen */
+    object-fit: contain; /* Asegura que la imagen se recorte adecuadamente */
+    margin: 0 auto;
+}
+
+/* Contenido de la pizza (título, descripción, botón) */
+.pizza-info {
+    padding: 15px; /* Relleno dentro del bloque */
+}
+
+/* Estilo para el título de la pizza */
+.pizza-info h4 {
+    font-size: 22px; /* Tamaño de fuente grande para el título */
+    font-weight: 700; /* Enfatiza el título */
+    color: #333; /* Color oscuro */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Estilo para la descripción de la pizza */
+.pizza-info p {
+    font-size: 16px; /* Tamaño de fuente más pequeño para la descripción */
+    color: #666; /* Color gris para el texto */
+    margin-bottom: 20px; /* Espacio debajo de la descripción */
+}
+
+/* Estilo para el botón "Agregar al pedido" */
+.add-to-order {
+    background-color: #ff4d4d; /* Color de fondo rojo para el botón */
+    color: white; /* Color de texto blanco */
+    border: none; /* Elimina el borde */
+    padding: 10px 20px; /* Relleno del botón */
+    font-size: 16px; /* Tamaño de la fuente en el botón */
+    font-weight: 600; /* Enfatiza el texto */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Muestra un cursor de mano */
+    transition: background-color 0.3s ease; /* Animación de cambio de color */
+}
+
+/* Cambia el color del botón al pasar el mouse */
+.add-to-order:hover {
+    background-color: #ff0000; /* Rojo más intenso al pasar el ratón */
+}
+
+/* Estilo para la sección de texto debajo de los bloques */
+.pizzas-text {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: 50px; /* Espacio arriba para separar de los bloques de pizza */
+    padding-left: 20px; /* Agrega un poco de espacio a la izquierda */
+}
+
+/* Estilo para el subtítulo "Pizzas" */
+.pizzas-text h2 {
+    font-size: 28px; /* Tamaño grande para el subtítulo */
+    font-weight: 700; /* Enfatiza el texto */
+    color: #333; /* Color oscuro para el subtítulo */
+    margin-bottom: 15px; /* Espacio debajo del subtítulo */
+}
+
+/* Estilo para el párrafo "Sabores" */
+.pizzas-text p {
+    font-size: 18px; /* Tamaño de fuente más pequeño para el párrafo */
+    color: #666; /* Color gris para el texto */
+    max-width: 800px; /* Limita el ancho máximo del párrafo */
+    margin: 0; /* Elimina márgenes extras */
+    line-height: 1.6; /* Mejor legibilidad con un poco de espacio entre líneas */
+}
+
+/* Estilo para la sección de Combos */
+.combos-text {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: 50px; /* Espacio arriba para separar de los bloques de pizza */
+    padding-left: 20px; /* Agrega un poco de espacio a la izquierda */
+}
+
+/* Estilo para el subtítulo "Combos" */
+.combos-text h2 {
+    font-size: 28px; /* Tamaño grande para el subtítulo */
+    font-weight: 700; /* Enfatiza el texto */
+    color: #333; /* Color oscuro para el subtítulo */
+    margin-bottom: 15px; /* Espacio debajo del subtítulo */
+}
+
+/* Estilo para el párrafo "Disfruta de nuestros combos" */
+.combos-text p {
+    font-size: 18px; /* Tamaño de fuente más pequeño para el párrafo */
+    color: #666; /* Color gris para el texto */
+    max-width: 800px; /* Limita el ancho máximo del párrafo */
+    margin: 0; /* Elimina márgenes extras */
+    line-height: 1.6; /* Mejor legibilidad con un poco de espacio entre líneas */
+}
+
+/* Estilo para la sección de BIG COMBOS */
+.big-combos-text {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: 50px; /* Espacio arriba para separar de los bloques de combos */
+    padding-left: 20px; /* Agrega un poco de espacio a la izquierda */
+}
+
+/* Estilo para el subtítulo "BIG COMBOS" */
+.big-combos-text h2 {
+    font-size: 28px; /* Tamaño grande para el subtítulo */
+    font-weight: 700; /* Enfatiza el texto */
+    color: #333; /* Color oscuro para el subtítulo */
+    margin-bottom: 15px; /* Espacio debajo del subtítulo */
+}
+
+/* Estilo para el párrafo de la sección BIG COMBOS */
+.big-combos-text p {
+    font-size: 18px; /* Tamaño de fuente más pequeño para el párrafo */
+    color: #666; /* Color gris para el texto */
+    max-width: 800px; /* Limita el ancho máximo del párrafo */
+    margin: 0; /* Elimina márgenes extras */
+    line-height: 1.6; /* Mejor legibilidad con un poco de espacio entre líneas */
+}
+@media (max-width: 768px) {
+    .navbar-top .nav-links {
+        left: 10%;
+        transform: none;
+    }
+    .navbar-top .nav-links-right {
+        display: none; /* Ocultar los íconos en móviles si no usas un menú hamburguesa */
+    }
+    .navbar-top .logo {
+        flex: 1 0 0;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .pizza-blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pizza-block {
+        width: 80%; /* Ajusta el tamaño de los bloques */
+    }
+}

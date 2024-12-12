@@ -1,0 +1,92 @@
+/* Estilos para el cuerpo de la página de registro */
+.loginbody {
+    background-color: #f4f4f4; /* Un color más claro para diferenciar */
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal del formulario */
+.register-form {
+    background-color: #fff; /* Fondo blanco */
+    width: 400px; /* Ancho fijo */
+    margin: 50px auto; /* Centrado automático en la pantalla */
+    padding: 30px; /* Espaciado dentro del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-sizing: border-box;
+}
+
+/* Título del formulario */
+.register-form h3 {
+    font-size: 28px;
+    color: #333; /* Color oscuro para el texto */
+    text-align: center; /* Alineado al centro */
+    margin-bottom: 30px; /* Espacio debajo */
+}
+
+/* Estilo de las etiquetas de los campos de entrada */
+.register-form label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo para los campos de entrada */
+.register-form input {
+    width: 100%; /* El campo ocupa todo el ancho */
+    padding: 12px; /* Relleno dentro del campo */
+    margin-bottom: 20px; /* Espacio debajo de cada campo */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    box-sizing: border-box;
+}
+
+/* Estilo para el botón de registro */
+.register-form button {
+    width: 100%; /* El botón ocupa todo el ancho */
+    padding: 12px; /* Relleno dentro del botón */
+    background-color: #ff4d4d; /* Color rojo */
+    color: white; /* Color del texto */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Manito al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de color del botón al pasar el mouse */
+.register-form button:hover {
+    background-color: #e74c3c; /* Rojo más oscuro */
+}
+
+/* Estilos para enlaces de login (si los tienes) */
+.register-form .login-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.register-form .login-link a {
+    color: #ff4d4d; /* Rojo para el enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.register-form .login-link a:hover {
+    text-decoration: underline; /* Subraya al pasar por encima */
+}
+
+/* Ajuste en dispositivos pequeños */
+@media (max-width: 768px) {
+    .register-form {
+        width: 80%; /* Más ancho en dispositivos pequeños */
+    }
+}
+.cart-product-image {
+    width: 50px; /* Tamaño de la imagen */
+    height: 50px; /* Tamaño de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alineación vertical */
+}

@@ -1,0 +1,196 @@
+/* Estilos generales para el carrito */
+.cart-icon {
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: 50px;  /* Ajusta la posición hacia abajo */
+    right: 0;
+    width: 300px;  /* Ancho mayor para hacerlo más grande */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-height: 400px;  /* Limita la altura máxima */
+    overflow-y: auto;  /* Añadir scroll si el carrito es muy largo */
+    display: none;
+    z-index: 9999;
+}
+
+/* Fondo del contenedor */
+.cart-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+/* Lista de productos en el carrito */
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Botón para ver el carrito completo */
+.view-cart-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f8b400;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.view-cart-btn:hover {
+    background-color: #e1a300;
+}
+
+
+.delete-item {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.delete-item:hover {
+    color: #e74c3c; /* Rojo más fuerte al pasar el ratón */
+}
+/* Asegurarnos de que los botones + y - estén alineados horizontalmente */
+.quantity-controls {
+    display: flex;                /* Usamos flexbox para alinearlos horizontalmente */
+    justify-content: center;      /* Centrar los botones y la cantidad */
+    align-items: center;          /* Centrar los botones verticalmente */
+    gap: 15px;                    /* Espacio entre los botones y la cantidad */
+    margin-top: 5px;              /* Espacio arriba */
+}
+
+
+
+
+/* Efecto al hacer clic (debe volver al tamaño original) */
+.quantity-btn:active {
+    transform: scale(1);          /* Volver al tamaño original al hacer clic */
+}
+
+/* Estilo para el número de cantidad */
+.pizza-quantity {
+    font-size: 22px;              /* Un tamaño de fuente adecuado para la cantidad */
+    font-weight: bold;            /* Hacer el número en negrita */
+    color: #333;                  /* Color de la cantidad */
+}
+
+/* Estilo de los ítems del carrito */
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;          /* Separación entre ítems */
+    font-size: 16px;              /* Tamaño de texto para el ítem */
+    padding: 10px;
+    border-radius: 8px;           /* Bordes redondeados para las filas */
+    background-color: #f9f9f9;    /* Fondo suave */
+    transition: background-color 0.3s ease;
+}
+
+#cart-items li:hover {
+    background-color: #f1f1f1;    /* Fondo más oscuro al pasar el ratón */
+}
+
+#cart-items li .pizza-info {
+    flex-grow: 1;                 /* Aseguramos que la información de la pizza ocupe el espacio disponible */
+    margin-right: 20px;           /* Espacio adicional entre la información y los botones de cantidad */
+}
+
+#cart-items li span {
+    display: inline-block;
+    margin: 0 15px;               /* Más espacio entre la cantidad y los botones */
+    font-weight: bold;
+}
+
+.delete-item {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.delete-item:hover {
+    color: #e74c3c; /* Rojo más fuerte al pasar el ratón */
+}
+
+#cart-total {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    border-top: 2px solid #ccc;  /* Línea separadora para el total */
+}
+/* Estilo para los botones de cantidad */
+.quantity-btn {
+    background-color: transparent;  /* Fondo transparente */
+    border: 1px solid #ddd;         /* Bordes suaves */
+    padding: 5px 10px;              /* Relleno adecuado */
+    font-size: 16px;                 /* Tamaño adecuado */
+    color: #f39c12;                 /* Color del texto */
+    cursor: pointer;                /* Cursor como puntero */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Efecto al pasar el ratón por encima */
+.quantity-btn:hover {
+    background-color: #f1f1f1;     /* Fondo ligeramente gris */
+    color: #e67e22;                 /* Color más oscuro */
+    transform: scale(1.1);          /* Efecto de agrandamiento */
+}
+
+/* Asegurarse de que no se estire el contenedor innecesariamente */
+.quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;  /* Espacio entre los botones y el número */
+}
+/* Eliminar el borde de enfoque en los botones */
+.quantity-btn:focus, .delete-item:focus {
+    outline: none; /* Eliminar el borde de enfoque */
+}
+
+/* Si deseas mantener un borde o efecto al pasar el mouse por encima, puedes agregarlo en :hover */
+.quantity-btn:hover, .delete-item:hover {
+    background-color: #f1f1f1;  /* Fondo ligeramente gris */
+    transform: scale(1.1);       /* Efecto de agrandamiento */
+    color: #e67e22;              /* Color más oscuro */
+}
+
+
+
+
+
+
+
+
+
+
+
+

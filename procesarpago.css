@@ -1,0 +1,136 @@
+/* Estilos generales */
+.lol {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Contenedor principal de la página */
+.payment-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 150px auto;
+    max-width: 1200px;  /* Esto le da un límite máximo de ancho a la página */
+}
+
+/* Formulario de pago (izquierda) */
+.form-container {
+    
+    flex: 0 0 65%; /* Ahora ocupa el 65% del ancho */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Opciones de tipo de envío */
+.shipping-options {
+    display: flex;
+    gap: 2rem;
+    align-items: center; /* Alinea el contenido verticalmente */
+}
+
+.shipping-options label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center; /* Alinea el texto y el radio button */
+}
+
+.shipping-options input[type="radio"] {
+    margin-right: 0.5rem; /* Espacio entre el círculo y el texto */
+}
+
+/* Información de Delivery */
+#delivery-info, #pickup-info {
+    margin-top: 1rem;
+    
+}
+
+/* Resumen de la compra (derecha) */
+.summary-container {
+    flex: 0 0 30%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.summary-container p {
+    margin-bottom: 10px; /* Añade espacio entre Subtotal, Envío y Total */
+}
+
+/* Estilo de botones */
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Responsive: Asegurar que se vea bien en dispositivos pequeños */
+@media (max-width: 768px) {
+    .payment-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, .summary-container {
+        width: 90%; /* Reducir el tamaño a un 90% del ancho en pantallas pequeñas */
+        margin-bottom: 2rem;
+    }
+}
+/* Estilo del botón "Proceder al pago" */
+#proceed-to-payment {
+    margin-top: 20px; /* Añade espacio entre el Total y el botón */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#proceed-to-payment:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Cambiar color del botón cuando el formulario sea válido */
+#proceed-to-payment:hover {
+    background-color: #45a049;
+}
+
